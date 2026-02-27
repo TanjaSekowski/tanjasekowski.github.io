@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meine Projekte</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(160deg, #163f57 0%, #1f5a7a 100%);
+            font-family: 'Inter', sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .container {
+            background-color: #FFF8F0;
+            border-radius: 24px;
+            padding: 34px 28px;
+            width: 95%;
+            max-width: 980px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+        
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.9rem;
+            text-align: left;
+            background: linear-gradient(135deg, #0c2432 0%, #163f57 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 28px;
+            letter-spacing: -0.5px;
+            padding: 18px 24px;
+            border: 3px solid #0c2432;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(12, 36, 50, 0.2);
+        }
+        
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 1.25rem;
+            color: #0c2432;
+            margin-top: 28px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #e8f0fe;
+            letter-spacing: -0.3px;
+        }
+        
+        .text-feld {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            padding: 14px 18px;
+            margin-bottom: 18px;
+            border-radius: 12px;
+            font-size: 0.88rem;
+            line-height: 1.6;
+            color: #475569;
+            border-left: 4px solid #0c2432;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+        
+        .text-feld.intro {
+            background: transparent;
+            padding: 16px 0;
+            margin-bottom: 32px;
+            font-size: 0.9rem;
+            line-height: 1.7;
+            color: #475569;
+            border-left: none;
+            box-shadow: none;
+        }
+        
+        a {
+            display: block;
+            margin-bottom: 10px;
+            padding: 12px 16px;
+            background-color: #f8fafc;
+            text-decoration: none;
+            color: #0c2432;
+            border-radius: 10px;
+            text-align: left;
+            font-weight: 500;
+            font-size: 0.88rem;
+            border: 2px solid #e2e8f0;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        a::before {
+            content: "📄";
+            margin-right: 10px;
+            font-size: 1rem;
+        }
+        
+        a::after {
+            content: "→";
+            position: absolute;
+            right: 20px;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        
+        a:hover {
+            background-color: #163f57;
+            color: white;
+            border-color: #163f57;
+            transform: translateX(8px);
+            box-shadow: 0 4px 12px rgba(22, 63, 87, 0.3);
+        }
+        
+        a:hover::after {
+            opacity: 1;
+            right: 15px;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 24px 18px;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            h2 {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Meine Projekte</h1>
+        <div class="text-feld intro">Willkommen! Auf dieser Seite stelle ich meine privaten Projekte vor.
+        
+        <h2>Lokaler Webserver unter Windows</h2>
+        <div class="text-feld">Auf meinem PC habe ich einen Webserver aufgesetzt und einen VPN-Zugriff eingerichtet, um von unterwegs mobil darauf zugreifen zu können.</div>
+        <a href="EinrichtungWebserver.pdf" target="_blank">Einrichtung eines Servers unter Windows</a>
+        <a href="VPN.pdf" target="_blank">Einrichtung eines VPNs</a>
+        
+        <h2>Monitoring-Tools unter Linux</h2>
+        <div class="text-feld">Zur Vertiefung meiner Linux-Kenntnisse, habe ich in VirtualBox zwei VMs mit Debian aufgesetzt, einen Webserver eingerichtet, Pingtests durchgeführt und verschiedene Monitoring-Tools ausprobiert.</div>
+        <a href="LinuxWebserver.pdf" target="_blank">Einrichtung eines Webserver unter Debian</a>
+        <a href="Pingtest.pdf" target="_blank">Pingtest & iftop</a>
+        <a href="Journalctl.pdf" target="_blank">journalctl</a>
+        <a href="netstat.pdf" target="_blank">netstat & ss</a>
+        
+        <h2>Kurse</h2>
+        <div class="text-feld">Für dieses Projekt habe ich mein technisches Verständnis vorab durch Kurse auf TryHackMe.com erweitert und die Lerninhalte in Text-Dateien dokumentiert, um sie zu verinnerlichen und als Nachschlagewerk nutzen zu können.</div>
+        <a href="DNS.pdf" target="_blank">DNS</a>
+        <a href="HTTP.pdf" target="_blank">HTTP</a>
+        <a href="HTML.pdf" target="_blank">HTML</a>
+        <a href="Websites.pdf" target="_blank">Websites</a>
+        <a href="LinuxFunda.pdf" target="_blank">Linux Fundamentals</a>
+        <a href="WindowsFunda.pdf" target="_blank">Windows Fundamentals</a>
+    </div>
+</body>
+</html>
